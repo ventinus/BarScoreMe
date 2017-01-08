@@ -19,18 +19,14 @@ Bout.create([
   { created_at: DateTime.new(2017,1,1) }
 ])
 
-BoutsGame.create([
-  { bout_id: 1, game_id: 1 }
-])
-
 PlayersBout.create([
   { player_id: 1, bout_id: 1 },
   { player_id: 2, bout_id: 1 }
 ])
 
 Contest.create([
-  { bout_id: 1 },
-  { bout_id: 1 }
+  { bout_id: 1, game_id: 1 },
+  { bout_id: 1, game_id: 1 }
 ])
 
 Score.create([

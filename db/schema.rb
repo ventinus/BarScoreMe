@@ -10,23 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170108193528) do
+ActiveRecord::Schema.define(version: 20170108065000) do
 
   create_table "bouts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "bouts_games", force: :cascade do |t|
-    t.integer "bout_id"
-    t.integer "game_id"
-    t.index ["bout_id"], name: "index_bouts_games_on_bout_id"
-    t.index ["game_id"], name: "index_bouts_games_on_game_id"
-  end
-
   create_table "contests", force: :cascade do |t|
+    t.integer "game_id"
     t.integer "bout_id"
     t.index ["bout_id"], name: "index_contests_on_bout_id"
+    t.index ["game_id"], name: "index_contests_on_game_id"
   end
 
   create_table "games", force: :cascade do |t|
