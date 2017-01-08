@@ -1,0 +1,4 @@
+h1 bouts
+ul
+  - @bouts.each do |bout|
+    li = bout.games.pluck(:name).join(", ")
