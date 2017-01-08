@@ -29,12 +29,11 @@ ActiveRecord::Schema.define(version: 20170108065000) do
   end
 
   create_table "players", force: :cascade do |t|
-    t.string   "name",               default: "", null: false
-    t.string   "email",              default: "", null: false
+    t.string   "username",           default: "", null: false
     t.string   "encrypted_password", default: "", null: false
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
-    t.index ["email"], name: "index_players_on_email", unique: true
+    t.index [nil], name: "index_players_on_email", unique: true
     t.index [nil], name: "index_players_on_reset_password_token", unique: true
   end
 
