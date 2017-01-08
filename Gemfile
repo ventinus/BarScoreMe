@@ -30,8 +30,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 
-# Static Pages
-gem 'high_voltage'
+gem 'annotate'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

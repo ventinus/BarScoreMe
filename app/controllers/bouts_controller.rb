@@ -34,7 +34,7 @@ class BoutsController < ApplicationController
 
   def destroy
     if @bout.destroy
-      redirect_to admin_bouts_path, notice: "#{@bout.title} was removed as an bout."
+      redirect_to admin_bouts_path, notice: "Bout for #{@bout.game.title} for #{@bout.created_at} was removed as a bout."
     else
       flash[:error] = "Bout was not deleted. #{@bout.errors.full_messages.to_sentence}."
       redirect_to admin_bouts_path
