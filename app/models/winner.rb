@@ -2,9 +2,9 @@
 #
 # Table name: winners
 #
-#  id          :integer          not null, primary key
-#  contests_id :integer
-#  players_id  :integer
+#  id         :integer          not null, primary key
+#  contest_id :integer
+#  player_id  :integer
 #
 
 class Winner < ApplicationRecord

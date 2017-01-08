@@ -2,9 +2,9 @@
 #
 # Table name: players_bouts
 #
-#  id         :integer          not null, primary key
-#  players_id :integer
-#  bouts_id   :integer
+#  id        :integer          not null, primary key
+#  player_id :integer
+#  bout_id   :integer
 #
 
 class PlayersBout < ApplicationRecord

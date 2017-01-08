@@ -1,18 +1,18 @@
 h1 login or sign up
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  = f.label :username, 'username'
-  = f.text_field :username, required: false, autofocus: true
+  = f.label :email, 'email'
+  = f.text_field :email, required: true, autofocus: true
   = f.label :password, 'password'
-  = f.password_field :password, required: false
+  = f.password_field :password, required: true
   = f.submit "Log in"
 
 h2 register it up
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = f.label :username, 'username'
-  = f.text_field :username, required: false
+  = f.label :email, 'email'
+  = f.text_field :email, required: true
   = f.label :password, 'password'
-  = f.password_field :password, required: false, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
+  = f.password_field :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
   = f.label :password_confirmation, 'confirm password'
-  = f.password_field :password_confirmation, required: false
+  = f.password_field :password_confirmation, required: true
   = f.submit "Sign up"
 
