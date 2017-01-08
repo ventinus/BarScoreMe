@@ -22,4 +22,5 @@ class Player < ApplicationRecord
       self.password = 'password'
     end
   end
+
 end

@@ -7,4 +7,6 @@
 #
 
 class Game < ApplicationRecord
+  has_many :bouts_games
+  has_many :bouts, through: :bouts_games
 end
