@@ -9,28 +9,35 @@ Game.create([
   { name: 'Shuffleboard' },
   { name: 'Pool' }
 ])
+
 Player.create([
   { username: 'philyo' },
   { username: 'jonman' }
 ])
+
 Bout.create([
   { created_at: DateTime.new(2017,1,1) }
 ])
+
 BoutsGame.create([
   { bouts_id: 0, games_id: 0 }
 ])
+
 PlayersBout.create([
   { players_id: 0, bouts_id: 0 },
   { players_id: 1, bouts_id: 0 }
 ])
+
 Contest.create([
   { bouts_id: 0 },
   { bouts_id: 0 }
 ])
+
 Score.create([
   { contests_id: 0, players_id: 0, value: 11 },
   { contests_id: 0, players_id: 1, value: 8 }
 ])
+
 Winner.create([
   { contests_id: 0, players_id: 0 },
   { contests_id: 1, players_id: 1 }

@@ -38,8 +38,7 @@ ActiveRecord::Schema.define(version: 20170108066000) do
     t.string   "encrypted_password", default: "", null: false
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
-    t.index [nil], name: "index_players_on_email", unique: true
-    t.index [nil], name: "index_players_on_reset_password_token", unique: true
+    t.index ["username"], name: "index_players_on_username", unique: true
   end
 
   create_table "players_bouts", force: :cascade do |t|
