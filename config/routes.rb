@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   # get '/', to: redirect('/players/sign_in')
 
   resources :players, except: :show
+
+  resources :bouts
 end
