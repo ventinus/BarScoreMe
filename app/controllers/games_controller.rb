@@ -35,6 +35,6 @@ class GamesController < ApplicationController
   end
 
   def game_params
-    params[:game].permit(:game, :date)
+    params[:game].permit(:name)
   end
 end
