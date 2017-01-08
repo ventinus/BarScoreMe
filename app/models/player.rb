@@ -13,10 +13,13 @@ class Player < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable
+  before_validation :default_password
 
   protected
 
-  def password_required?
-    false
+  def default_password
+    if self.password.nil?
+      self.password = 'password'
+    end
   end
 end
