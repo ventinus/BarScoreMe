@@ -2,7 +2,7 @@ class BoutsController < ApplicationController
   before_action :set_bout, only: [:edit, :update, :destroy]
 
   def index
-    # @bouts = Bout.all
+    @bouts = Bout.all
   end
 
   def new
