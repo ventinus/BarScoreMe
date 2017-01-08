@@ -16,28 +16,29 @@ Player.create([
 ])
 
 Bout.create([
-  { games: [Game.first], players: Player.all, created_at: DateTime.new(2017,1,1) }
+  { created_at: DateTime.new(2017,1,1) }
 ])
 
-puts 'okok'
-sleep 1
+BoutsGame.create([
+  { bout_id: 1, game_id: 1 }
+])
 
-# PlayersBout.create([
-#   { player: Player.first, bout: Bout.first },
-#   { player: Player.find(2), bout: Bout.first }
-# ])
+PlayersBout.create([
+  { player_id: 1, bout_id: 1 },
+  { player_id: 2, bout_id: 1 }
+])
 
 Contest.create([
-  { bout: Bout.first, players: [Player.first] },
-  { bout: Bout.first, players: [Player.find(2)] }
+  { bout_id: 1 },
+  { bout_id: 1 }
 ])
 
 Score.create([
-  { contest: Contest.first, player: Player.first, value: 11 },
-  { contest: Contest.find(2), player: Player.find(2), value: 8 }
+  { contest_id: 1, player_id: 1, value: 11 },
+  { contest_id: 2, player_id: 2, value: 8 }
 ])
 
-# Winner.create([
-#   { contest: Contest.first, player: Player.first },
-#   { contest:Contest.find(2), player: Player.find(2) }
-# ])
+Winner.create([
+  { contest_id: 0, player_id: 0 },
+  { contest_id: 2, player_id: 2 }
+])

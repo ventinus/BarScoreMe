@@ -18,15 +18,15 @@ ActiveRecord::Schema.define(version: 20170108066000) do
   end
 
   create_table "bouts_games", force: :cascade do |t|
-    t.integer "bouts_id"
-    t.integer "games_id"
-    t.index ["bouts_id"], name: "index_bouts_games_on_bouts_id"
-    t.index ["games_id"], name: "index_bouts_games_on_games_id"
+    t.integer "bout_id"
+    t.integer "game_id"
+    t.index ["bout_id"], name: "index_bouts_games_on_bout_id"
+    t.index ["game_id"], name: "index_bouts_games_on_game_id"
   end
 
   create_table "contests", force: :cascade do |t|
-    t.integer "bouts_id"
-    t.index ["bouts_id"], name: "index_contests_on_bouts_id"
+    t.integer "bout_id"
+    t.index ["bout_id"], name: "index_contests_on_bout_id"
   end
 
   create_table "games", force: :cascade do |t|
@@ -42,25 +42,25 @@ ActiveRecord::Schema.define(version: 20170108066000) do
   end
 
   create_table "players_bouts", force: :cascade do |t|
-    t.integer "players_id"
-    t.integer "bouts_id"
-    t.index ["bouts_id"], name: "index_players_bouts_on_bouts_id"
-    t.index ["players_id"], name: "index_players_bouts_on_players_id"
+    t.integer "player_id"
+    t.integer "bout_id"
+    t.index ["bout_id"], name: "index_players_bouts_on_bout_id"
+    t.index ["player_id"], name: "index_players_bouts_on_player_id"
   end
 
   create_table "scores", force: :cascade do |t|
-    t.integer "contests_id"
-    t.integer "players_id"
-    t.string  "value",       null: false
-    t.index ["contests_id"], name: "index_scores_on_contests_id"
-    t.index ["players_id"], name: "index_scores_on_players_id"
+    t.integer "contest_id"
+    t.integer "player_id"
+    t.string  "value",      null: false
+    t.index ["contest_id"], name: "index_scores_on_contest_id"
+    t.index ["player_id"], name: "index_scores_on_player_id"
   end
 
   create_table "winners", force: :cascade do |t|
-    t.integer "contests_id"
-    t.integer "players_id"
-    t.index ["contests_id"], name: "index_winners_on_contests_id"
-    t.index ["players_id"], name: "index_winners_on_players_id"
+    t.integer "contest_id"
+    t.integer "player_id"
+    t.index ["contest_id"], name: "index_winners_on_contest_id"
+    t.index ["player_id"], name: "index_winners_on_player_id"
   end
 
 end
