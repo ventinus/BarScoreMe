@@ -7,4 +7,5 @@
 #
 
 class Contest < ApplicationRecord
+  belongs_to :game
 end

@@ -1,0 +1,35 @@
+$bg: white;
+$bg-off: #fff9dd;
+$fg: #131313;
+$fg-lighter: lighten($fg, 40%);
+
+$primary: #e88235;
+$secondary: #ff581d;
+$tertiary: #ffc063;
+
+
+$border-sm: 8px;
+
+$site-width: 1190px;
+
+$screen-xs-min: 620px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: $site-width;
+
+$screen-xxs-max: ($screen-xs-min - 1);
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+
+// can't figure out why I need to interpolate 'px' in order to get it concatenating
+//   with values properly (e.g. map-get(<some map>, <some key>)px results in
+//   an invalid "<val> px" as opposed to "<val>px"
+$px: px;
+
+
+// player colors
+$player-1: #4da7ff;
+$player-2: #fff15d;
+$player-3: #9d3ae8;
+$player-4: #31c46b;

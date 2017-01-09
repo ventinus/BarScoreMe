@@ -1,4 +1,21 @@
-h1 bouts
-ul
-  - @bouts.each do |bout|
-    li = bout.games.pluck(:name).join(", ")
+#view-bouts
+  h1 This is the bouts page yo
+  ul.bouts
+    - @bouts.each do |bout|
+      li
+        h3 = displayDate(bout.created_at)
+        
+        ul.usernames
+          - bout.players.all.pluck(:username).each do |username|
+            li = username
+        
+        - if shouldShowTotal(bout)
+          div.total
+            h4 Total
+            span total goes hurr
+          
+        ul.games
+          - bout.gameToContests.each do |aGame, theContests|
+            li
+              h4 = aGame.name
+              span.contest-aggregate

@@ -7,3 +7,12 @@
 //  Base: Global resets and settings
 //  ________________________________________________
   @import "base/normalize";
+  @import "base/custom-reset";
+
+//  global styles
+//  ________________________________________________
+  @import "main";
+
+//  categorized styles
+//  ________________________________________________
+  @import "views/bouts";
