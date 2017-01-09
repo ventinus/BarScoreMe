@@ -9,5 +9,8 @@
 #
 
 class Player < ApplicationRecord
+  has_many :players_bouts
+  has_many :bouts, through: :players_bouts
+
   validates_uniqueness_of :username
 end

@@ -8,8 +8,11 @@
 #
 
 class Bout < ApplicationRecord
-  has_many :bouts_games
-  has_many :games, through: :bouts_games
+  has_many :players_bouts
+  has_many :players, through: :players_bouts
+
+  has_many :contests
+
   def gameToContests
     self.contests.group_by(&:game)
   end

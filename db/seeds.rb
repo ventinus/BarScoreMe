@@ -29,8 +29,8 @@ PlayersBout.create([
 ])
 
 Contest.create([
-  { bout_id: 1 },
-  { bout_id: 1 }
+  { bout_id: 1, game_id: 1 },
+  { bout_id: 1, game_id: 1 }
 ])
 
 Score.create([

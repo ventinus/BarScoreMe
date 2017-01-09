@@ -26,7 +26,9 @@ ActiveRecord::Schema.define(version: 20170108193528) do
 
   create_table "contests", force: :cascade do |t|
     t.integer "bout_id"
+    t.integer "game_id"
     t.index ["bout_id"], name: "index_contests_on_bout_id"
+    t.index ["game_id"], name: "index_contests_on_game_id"
   end
 
   create_table "games", force: :cascade do |t|
