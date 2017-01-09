@@ -8,4 +8,6 @@
 
 class Contest < ApplicationRecord
   belongs_to :game
+  has_many :winners
+  has_many :scores
 end

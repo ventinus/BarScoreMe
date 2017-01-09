@@ -13,6 +13,8 @@ class Bout < ApplicationRecord
 
   has_many :contests
 
+  accepts_nested_attributes_for :players
+
   def gameToContests
     self.contests.group_by(&:game)
   end

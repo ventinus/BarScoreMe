@@ -7,6 +7,7 @@ class BoutsController < ApplicationController
 
   def new
     @bout = Bout.new
+    @players = Player.all
   end
 
   def edit

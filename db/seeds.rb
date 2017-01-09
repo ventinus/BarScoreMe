@@ -39,6 +39,6 @@ Score.create([
 ])
 
 Winner.create([
-  { contest_id: 0, player_id: 0 },
+  { contest_id: 1, player_id: 1 },
   { contest_id: 2, player_id: 2 }
 ])
