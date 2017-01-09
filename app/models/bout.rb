@@ -12,4 +12,5 @@ class Bout < ApplicationRecord
   has_many :games, through: :bouts_games
   def gameToContests
     self.contests.group_by(&:game)
+  end
 end
